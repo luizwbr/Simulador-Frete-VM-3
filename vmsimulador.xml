@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade">
+   <name>Virtuemart Simulador Frete</name>
+   <version>1.1.10</version>
+   <author>Luiz Weber</author>
+   <authorEmail>weber@weber.eti.br</authorEmail>
+   <authorUrl>http://weber.eti.br</authorUrl>
+   <license>GNU General Public License v2.0</license>
+   <description>Plugin de pagamento Simulador de frete - VirtueMart
+	&lt;div style=&quot;background:#E5F5FF;border:1px solid #99D6FF;padding:10px;margin:10px; -box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -webkit-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -moz-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;&quot;&gt;
+		&lt;h1&gt;Plugin que mostra o simulador de frete na tela do produto e do carrinho para Virtuemart 3.&lt;/h1&gt;
+		
+		&lt;div style=&quot;float:right;width: 20%&quot;&gt;
+		&lt;img src=&quot;../plugins/system/vmsimulador/simulador-de-frete---full.png&quot; /&gt;
+		&lt;/div&gt;
+		
+	&lt;/div&gt;
+
+	&lt;div&gt;	Licença: &lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;GNU/GPL v3&lt;/a&gt; - Desenvolvido por Luiz Weber - &lt;a href=&quot;http://weber.eti.br&quot;&gt;Weber TI&lt;/a&gt; </description>
+	<files>
+		<filename plugin="vmsimulador">vmsimulador.php</filename>
+		<filename>jquery.maskinput.js</filename>
+		<filename>simulador-de-frete---full.png</filename>
+		<folder>images</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name='basic'>
+			<field name="tag_simulador" type="text"
+					description="Tag para inserir o Simulador de frete: &lt;simulador&gt;"
+					label="Tag Simulador"
+					default="simulador"
+					size="15"
+			/>
+			<field name="quantidade_produto" type="radio" default="0" label="Usar quantidade de produto na tela do produto" description="">
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+            </field>
+        	<field name="somar_valor_carrinho" type="radio" class="radio" default="0" label="Somar valor do frete ao carrinho ao clicar">
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+           	</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
